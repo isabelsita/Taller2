@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="profesores.css">
+    <title>TALLER 2</title>
+</head>
+
+<body>
+    <nav class="des">
+        <nav>
+            <table class="bor">
+                <tr class="bor">
+                    <td class="verde"></td>
+                    <td class="blanco"></td>
+                    <td class="rojo"></td>
+                </tr>
+            </table>
+        </nav>
+        <br>
+        <br>
+        <center>
+                <table class="container">
+                    <tr>
+                        <p class="titulo2">Institución Educativa Diego Echavarría Misas</p>
+                        <p class="titulo2">Docentes:</p>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <img width="150px 150px" src="data:image/png;base64,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" alt="">
+                        </td>
+                        <td class="invi">_</td>
+                        <td> 
+                            <p class="text">Aprobado por Resolución Departamental #16217 de noviembre 27 de 2002
+                            Resolución Municipal #325 de 2016 - Modificada por Resolución Municipal #201805500021 del 16 de julio de 2018
+                            Resolución Municipal #20175001208 del 17 de julio de 2017 - Resolución Municipal #20175001241 del 17 de julio de 2017
+                            Resolución Municipal #201805500853 del 8 de agosto de 2018 - Resolución Municipal #201805009717 del noviembre 29 de 2018
+                            Resolución Rectoral A-1 Abril,23 De,2020 – Resolucion Rectoral A-1 Abril,23 De,2020.
+                            Resolución Municipal F#2021051509279 el agosto,27 De,2021.
+                            DANE:105001000931 / NIT:811.019.732-3
+                            </p>
+                            <br>
+                            <p class="text">Núcleo919 – MEDELLIN</p>
+                        </td>
+                        <td class="invi">_</td>
+                        <td colspan="2">
+                            <img width="150px 150px" src="https://pbs.twimg.com/media/EwdyXwMW8AIM65m?format=jpg&name=large" alt="">
+                        </td>
+            
+                    </tr>
+                </table>
+        </center>
+    </nav>
+  <br>
+  <br>
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Lino García Villafañe</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente de aula</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en ciencias de la educacion con especializacion en biologia y quimica </td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Felicita Arriaga Guevara</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente ingles-artistica</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en idioma extranjero</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">John Lara Bedolla</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente matematicas</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en pedagogia y docencia y matematicas</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Juan Bolivar Benitez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente de aula</td>
+                                <td class="invi">-----</td>
+                                <td>Bachiller padagogico, licenciado en educación, especialista en educacón sexual</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Gerardo Vargas Correa</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente ed fisica</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en educacion fisica</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Gloria Elci Sepulveda</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente aula</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en lengua casteñana</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Maria Muños Marin</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td class="invi">-----</td>
+                                <td>ESTUDIOS</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">John Willian Florez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente quimica-biologia</td>
+                                <td class="invi">-----</td>
+                                <td>Quimica</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Isabel Jaramillo Herrera</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>OCUPACIONES</td>
+                                <td class="invi">-----</td>
+                                <td>ESTUDIOS</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Dorlan Alexander Muños</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente fisica</td>
+                                <td class="invi">-----</td>
+                                <td>Especialista gerencia educativa, pregrado, maestria, enseñanza ciencias exacta y matematicas </td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Isabel Cristina Olea</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>OCUPACIONES</td>
+                                <td class="invi">-----</td>
+                                <td>ESTUDIOS</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Argiro Velasquez Perez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente tiempo completo</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura de español y literatura </td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Juan Monsalvce Vásquez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente ingles- 10, 11</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciado en lenguas extrangeras y magister de educacion</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Paola Toro Garzon</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente media tecnica</td>
+                                <td class="invi">-----</td>
+                                <td>Arquitectura</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Linda Rivera Guerrero </p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente</td>
+                                <td class="invi">-----</td>
+                                <td>Especialista en didáctica de las ciencias, magister y dictorado en filosófia, doctorado en ciencias de la educacón</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Nidia Julieth Hernandez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente de aula en educacion artista y cultural</td>
+                                <td class="invi">-----</td>
+                                <td>Magister en gestion de licenciada en artes plasticas</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">José Jesús Álsate</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente aula filosófia</td>
+                                <td class="invi">-----</td>
+                                <td>Pregrado licenciatura filosófia UdeA postgrado magister en didactica en las ciencia sociales</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Eliana María Sánchez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente ingles</td>
+                                <td class="invi">-----</td>
+                                <td>Profecional en idiomas y especialista en idiomas bilingues</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Franck Javier Galeano </p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente religion</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciado en filosófia y magister en educacion</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Martha Lenis Ballesteros</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente lengua castellana</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en humanidades y lengua castellana magister en hermeneutica literaria</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">John Alzate Suarez</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente sociales-filosófia</td>
+                                <td class="invi">-----</td>
+                                <td>Filosófia y licenciatura en historia </td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Tatiana Ossa Zapata </p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente matematicas</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en matematicas</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Ana Lorena Castaño</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente de biologia y media tecnica </td>
+                                <td class="invi">-----</td>
+                                <td>ESTUDIOS</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Juan Felipe Arroyave</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Coordinador </td>
+                                <td class="invi">-----</td>
+                                <td>Licenciado e historia y filosófia</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Camilo Castañeda Cardona </p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente de sociales</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en filosófia y ciencias sociales, administrador de empresas y doctor en ciencias de la educacion </td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Maria luzdary muñoz</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente etica y religion</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciatura en educacion con especializacion en orientacion en consejeria </td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Julio Cesar Ruiz Giraldo</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Coordinador Academico</td>
+                                <td class="invi">-----</td>
+                                <td>Licenciado en educacion, especialista en educacion y magister en docencia</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>    
+        </div>
+
+
+
+        <div class="container">
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Cesar Augusto ceballos</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Rector</td>
+                                <td class="invi">-----</td>
+                                <td>Psicologia</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div> 
+            
+            
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Tatiana Silva </p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Docente quimica</td>
+                                <td class="invi">-----</td>
+                                <td>Ingenieria quimica</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="card">
+                <div class="contenido">
+                    <p class="titulo2">Cesar Augusto ceballos</p>
+                    <img width="100px 100px" src="https://www.shutterstock.com/image-vector/blank-avatar-photo-place-holder-600nw-1095249842.jpg" alt="">
+                    <center>
+                        <table>
+                            <tr>
+                                <td class="titulo">Ocupacion</td>
+                                <td class="invi">-----</td>
+                                <td class="titulo">Estudios</td>
+                            </tr>
+                            <tr>
+                                <td>Rector</td>
+                                <td class="invi">-----</td>
+                                <td>Psicologia</td>
+                            </tr>
+                        </table>   
+                    </center> 
+                        
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+<br>
+<br>
+<br>
+<footer>
+    <div class="foot">
+        <center>
+            <table>
+                <tr>
+                    <td class="titulo">Integrantes: </td>
+                    <td class="invi">-----</td>
+                    <td class="titulo">Correo:</td>
+                    <td class="invi">-----</td>
+                    <td class="titulo">Número celular</td>
+                    <td class="invi">-----</td>
+                    <td class="titulo">Grado</td>
+                </tr>
+    
+                <tr>
+                    <td>Maria Isabel Vasquez Henao:</td>
+                    <td class="invi">-----</td>
+                    <td>mariavasquezh@idem.edu.co</td>
+                    <td class="invi">-----</td>
+                    <td>+57 302 2202356</td>
+                    <td class="invi">-----</td>
+                    <td>11-4</td>
+                </tr>
+    
+                <tr>
+                    <td>Sara Ximena Machado Tuberquia:</td>
+                    <td class="invi">-----</td>
+                    <td>saramachadot@idem.edu.co</td>
+                    <td class="invi">-----</td>
+                    <td>+57 301 5422863</td>
+                    <td class="invi">-----</td>
+                    <td>11-4</td>
+                </tr>
+    
+                <tr>
+                    <td>Mauricio Santiago Garcia Ramirez:</td>
+                    <td class="invi">-----</td>
+                    <td>mauro.gr0713@gmail.com</td>
+                    <td class="invi">-----</td>
+                    <td>+57 316 7642784</td>
+                    <td class="invi">-----</td>
+                    <td>11-4</td>
+                </tr>
+    
+                <tr>
+                    <td>Jefferson Giraldo Arango:</td>
+                    <td class="invi">-----</td>
+                    <td>CORREO</td>
+                    <td class="invi">-----</td>
+                    <td>+57 323 5327226</td>
+                    <td class="invi">-----</td>
+                    <td>11-4</td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</footer>
+</body>
+</html>
